@@ -794,7 +794,7 @@ Resources:
           # get the IP allocation id
 
           EIPs=(${FixedEIPa.AllocationId} ${FixedEIPb.AllocationId}
-          ${FixedEIPc.AllocationId}
+          ${FixedEIPc.AllocationId})
 
           for i in ${!EIPs[@]}; do
              out=$(aws ec2  describe-addresses --region ${AWS::Region} --allocation-ids $i)
