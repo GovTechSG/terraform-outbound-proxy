@@ -60,7 +60,6 @@ variable "public_subnet_ids" {
   description = "Public SubnetIDs where the proxy will be placed (Select min 2 max 3)"
 }
 
-
 variable "network_allowed_cidr" {
   type        = string
   description = "CIDR allowed in Proxy Security Group. The allowed block size is between a /32 netmask and /8 netmask"
