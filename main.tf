@@ -20,6 +20,7 @@ resource "aws_cloudformation_stack" "proxy" {
     KeyName             = var.ssh_key_name
     PermissionsBoundary = var.permissions_boundary
     PrivateSubnetIDs    = join(",", var.private_subnet_ids)
+    PublicSubnetIds     = join(",", var.public_subnet_ids)
     NetworkAllowedCIDR  = var.network_allowed_cidr
   }
   template_body = file("./outbound-proxy.yaml")
