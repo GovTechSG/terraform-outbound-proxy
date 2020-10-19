@@ -23,5 +23,6 @@ resource "aws_cloudformation_stack" "proxy" {
     PublicSubnetIDs     = join(",", var.public_subnet_ids)
     NetworkAllowedCIDR  = var.network_allowed_cidr
   }
+  capabilities = ["CAPABILITY_NAMED_IAM"]
   template_body = file("./outbound-proxy.yaml")
 }
