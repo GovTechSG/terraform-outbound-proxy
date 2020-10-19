@@ -35,7 +35,7 @@ variable "instance_type" {
 variable "latest_ami_id" {
   type        = string
   description = "AMI ID to use, default to latest AMI Amazon linux2"
-  default     = " /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
+  default     = "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
 }
 
 variable "ssh_key_name" {
